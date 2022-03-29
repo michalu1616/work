@@ -64,15 +64,16 @@ for (l = 0; l < k.length; l++) {
 		target.style.color = "white"; 
 	});
 }
-var m = document.getElementsByClassName("menubutton");
-var n;
-for (n = 0; n < m.length; n++) {
-	m[n].addEventListener("touchstart", function(e) {
+ 
+var myObj = document.getElementsByClassName("menubutton");
+//pozn in vrati key pole, of vraci hodnotu
+for (let m of myObj) {
+	m.addEventListener("touchstart", function(e) {
 		e = e || window.event;
 		var target = e.target || e.srcElement;
 		target.style.color = "#084fc2"; 
 	});
-	m[n].addEventListener("touchend", function(e) {
+	m.addEventListener("touchend", function(e) {
 		e = e || window.event;
 		var target = e.target || e.srcElement;
 		target.style.color = "#0099ff"; 
